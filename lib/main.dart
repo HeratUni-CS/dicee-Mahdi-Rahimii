@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
                   padding: const EdgeInsets.all(16.0),
                   child: TextButton(
                     style: TextButton.styleFrom(),
-                    child: Image.asset('images/dice-${dice}.png'),
+                    child: Image.asset('images/dice${dice}.png'),
                     onPressed: () {
                       setState(() {
                         num = Random().nextInt(6) + 1;
@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
                   padding: const EdgeInsets.all(16.0),
                   child: TextButton(
                     style: TextButton.styleFrom(),
-                    child: Image.asset('images/dice-${dice1}.png'),
+                    child: Image.asset('images/dice${dice1}.png'),
                     onPressed: () {
                       setState(() {
                         num1 = Random().nextInt(6) + 1;
