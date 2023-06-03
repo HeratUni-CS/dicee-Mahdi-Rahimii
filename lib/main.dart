@@ -13,21 +13,21 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
-int num = 1;
-int num1 = 1;
+int dice = 1;
+int dice1 = 1;
 
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-		appBar: AppBar(
+        appBar: AppBar(
           title: const Center(
             child: Text('Dice Game'),
           ),
           backgroundColor: Colors.brown[900],
         ),
-		body: Center(
+        body: Center(
           child: Row(
             children: [
               Expanded(
@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
                   padding: const EdgeInsets.all(16.0),
                   child: TextButton(
                     style: TextButton.styleFrom(),
-                    child: Image.asset('images/dice-${num}.png'),
+                    child: Image.asset('images/dice-${dice}.png'),
                     onPressed: () {
                       setState(() {
                         num = Random().nextInt(6) + 1;
@@ -45,12 +45,12 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
               ),
-			  Expanded(
+              Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: TextButton(
                     style: TextButton.styleFrom(),
-                    child: Image.asset('images/dice-${num1}.png'),
+                    child: Image.asset('images/dice-${dice1}.png'),
                     onPressed: () {
                       setState(() {
                         num1 = Random().nextInt(6) + 1;
